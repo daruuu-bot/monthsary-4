@@ -1,5 +1,5 @@
 "use client";
-<FloatingHearts />
+
 import { motion } from "framer-motion";
 
 export default function FloatingHearts() {
@@ -14,9 +14,11 @@ export default function FloatingHearts() {
         <motion.div
           key={heart}
           className="fixed text-2xl pointer-events-none"
+          style={{
+            left: `${Math.random() * 100}%`,
+          }}
           initial={{
             y: "100vh",
-            x: window.innerWidth
           }}
           animate={{
             y: "-100px",
